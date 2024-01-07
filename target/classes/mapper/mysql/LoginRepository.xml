@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+<mapper namespace="com.example.repository.LoginRository">
+  <resultMap type="com.example.domain.model.Login" id="Login">
+    <id column="userId" property="userId"></id>
+    <id column="password" property="password"></id>
+    <id column="today" property="today"></id>
+    <result column="memoId" property="memoId"></result>
+    <result column="memoName" property="memoName"></result>
+    <result column="content1" property="content1"></result>
+    <result column="content2" property="content2"></result>
+    <result column="content3" property="content3"></result>
+    <result column="icon" property="icon"></result>
+    <result column="userName" property="userName"></result>
+    <result column="languague" property="languague"></result>
+    <result column="font" property="font"></result>
+    <result column="fontSize" property="fontSize"></result>
+    <result column="url" property="url"></result>
+  </resultMap>
+  
+  <select id="selectLogin" resultMap="Login">
+      SELECT userId 
+        FROM users 
+       WHERE address = #{address} 
+         AND pass = #{pass};
+  </select>
+  
+  <select id="selectLoginInfo" resultMap="Login">
+      SELECT memo.memoName, memo_content.content1, memo_content.content2, memo_content.content3
+        FROM memo 
+        JOIN memo_content 
+          ON memo.memoId = memo_content.memoId
+       WHERE memo.userId = #{userId}
+         AND memo_content.today = #{today};
+  </select>
+
+  
+</mapper>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+<mapper namespace="com.example.repository.SettingRepository">
+  <resultMap type="com.example.domain.model.Setting" id="Setting">
+    <id column="userId" property="userId"></id>
+    <result column="userName" property="userName"></result>
+    <result column="icon" property="icon"></result>
+    <result column="languague" property="languague"></result>
+    <result column="font" property="font"></result>
+    <result column="fontSize" property="fontSize"></result>
+  </resultMap>
+  
+  <update id="updateSetting" resultMap="Setting">
+      UPDATE setting
+         SET lauguage = #{lauguague}
+            ,font = #{font}
+            ,fontSize = #{fontSize}
+       WHERE userId = #{userId};
+  </update>
+  
+  <update id="updateUsers" resultMap="Setting">
+      UPDATE users
+         SET userName = #{userName}
+            ,icon = #{icon}
+       WHERE userId = #{userId};
+  </update>
+
+</mapper>

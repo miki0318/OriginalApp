@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/memocopy.css">
+    <!--Googleフォント-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Yomogi&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <input type="image" src="img/close.png" id="closebtn" value="閉じる" onclick="location.href='memolist.html'">
+    </header>
+    <main>
+      <select name="account" size="1" id="accountlist">
+        <option value="account1">メモ名</option>
+        <option value="account2">メモ名</option>
+      </select>
+      <div id="copybox">
+        <p id="copycode">URL</p>
+      </div>
+      <button id="copybtn" type="copy">コピー</button>
+    </main>
+    <footer></footer>
+    <script src="js/memocopy.js"></script>
+  </body>
+</html>
