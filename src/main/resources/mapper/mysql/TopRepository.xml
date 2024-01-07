@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+<mapper namespace="com.example.repository.TopRepository">
+  <resultMap type="com.example.domain.model.Top" id="Top">
+    <id column="memoId" property="memoId"></id>
+    <result column="content1" property="content1"></result>
+    <result column="content2" property="content2"></result>
+    <result column="content3" property="content3"></result>
+  </resultMap>
+
+<!--メモ内容更新-->
+  <update id="updateTop" resultMap="Top">
+     UPDATE memo_content
+        SET content1 = #{content1}
+           ,content2 = #{content2}
+           ,content3 = #{content3}
+      WHERE memoId = #{memoId};
+  </update>
+  
+</mapper>

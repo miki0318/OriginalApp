@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/top.css">
+    <title>日記</title>
+    <!--Googleフォント-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Yomogi&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <!--ajax-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  </head>
+   <body>
+    <header>
+      <div id="top">
+<!--        <h1 id="memoname">-->
+<!--          メモ名-->
+          <p><span id="memoname"></span></p>
+<!--        </h1>-->
+        <button type=“button” onclick="logout()" id="out">ログアウト</button>
+      </div>
+      <table border="1">
+        <tr>
+          <td id="left">
+			<p><span id="icon"></span></p>
+<!--            <img src ="img/icon.png" id="icon">-->
+          </td>
+          <td id="center">
+			<p><span id="today"></span></p>
+<!--            <h1 id="date">-->
+<!--              2023.01.01.Mon-->
+<!--            </h1>  -->
+          </td>
+          <td id="right1">
+            <img src ="img/layout.png" id="layout" onclick="layoutchange()">
+          </td>
+          <td id="right2">
+            <img src ="img/edit.png" id="edit" alt="button" onclick="slideshow()">
+          </td>
+        </tr>
+      </table>
+    </header>
+    <main>
+       <form id="mainform">
+        <input type="text" name="name" class="heading" id=title1 placeholder="タイトル" readonly>
+        <br>
+        <textarea class="textbox" readonly id="box1"></textarea>
+        <br>
+        <input type="text" name="name" class="heading" id=title2 placeholder="タイトル" readonly>
+        <br>
+        <textarea class="textbox" readonly id="box2"></textarea>
+        <br>
+        <input type="text" name="name" class="heading" id=title3 placeholder="タイトル" readonly>
+        <br>
+        <textarea class="textbox" readonly id="box3"></textarea>
+       </form>
+       <div id="overlay">
+        <div class="cv-spinner">
+          <span class="spinner"></span>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <table border="1">
+        <tr>
+          <td class="search">
+            <button onclick="location.href='main-search.html'" id="searchbtn">
+              <img src ="img/search.png" class="bottom">
+            </button>
+          </td>
+          <td class="setting">
+            <button onclick="location.href='setting.html'" id="setbtn">
+              <img src ="img/set.png" class="bottom">
+            </button>
+          </td>
+          <td class="other">
+            <button onclick="location.href='list.html'" id="listbtn">
+              <img src ="img/list.png" class="bottom">
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="search">
+            <h2>検索</h2>
+          </td>
+          <td class="setting">
+            <h2>各種設定</h2>
+          </td>
+          <td class="list">
+            <h2>リスト</h2>
+          </td>
+        </tr>
+      </table>
+    </footer>
+    <script src="js/top.js"></script>  
+   </body>
+  
+</html>

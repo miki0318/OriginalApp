@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<mapper namespace="com.example.repository.MemoAddRepository">
+  <resultMap type="com.example.domain.model.MemoAdd" id="MemoAdd">
+    <id column="userId" property="userId"></id>
+    <result column="memoName" property="memoName"></result>
+  </resultMap>
+
+  <insert id="insertMemo" resultMap="MemoAdd">
+      INSERT INTO memo (
+                  userId
+                 ,memoName
+                       )
+           VALUES(
+                 #{userId}
+                ,#{memoName}
+                 )
+  </insert>
+
+</mapper>  

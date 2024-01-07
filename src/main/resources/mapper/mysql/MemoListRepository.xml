@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<mapper namespace="com.example.repository.MemoListRepository">
+  <resultMap type="com.example.domain.model.MemoList" id="MemoList">
+    <id column="userId" property="userId"></id>
+    <result column="memoId" property="memoId"></result>
+  </resultMap>
+  
+  <update id="updateMemoActive" resultMap="MemoList">
+      UPDATE active
+         SET memoId = #{memoId}
+       WHERE userId = #{userId};
+  </update>
+  
+  <insert id="insertUser" resultMap="MemoList">
+      INSERT INTO approve(
+                  memoId
+                 ,userId
+                 )
+           VALUES(
+                  #{memoId}
+                 ,#{userId}
+                 )
+  </insert>
+  
+  <delete id="deleteUser" resultMap="MemoList">
+      DELETE FROM wait_approve
+       WHERE memoId = #{memoId}
+         AND userId = #{userId};
+  </delete>
+
+</mapper>  

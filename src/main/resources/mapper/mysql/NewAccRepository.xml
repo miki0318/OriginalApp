@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<mapper namespace="com.example.repository.NewAccRepository">
+  <resultMap type="com.example.domain.model.NewAcc" id="NewAcc">
+    <result column="userName" property="userName"></result>
+    <result column="address" property="address"></result>
+    <result column="password" prpperty="password"></result>
+    <result column="birthday" property="birthday"></result>
+  </resultMap>
+  
+  <insert id="insertNewAcc" resultMap="NewAcc">
+      INSERT INTO users(
+                  userName
+                 ,password
+                 ,birthday
+                 ,address
+                 )
+            VALUE(
+                  #{userName}
+                 ,#{password}
+                 ,#{birthday}
+                 ,#{address}
+                 )
+   </insert>
+
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+<mapper namespace="com.example.repository.PwRepository">
+  <resultMap type="com.example.domain.model.Pw" id="Pw">
+    <id column="userId" property="userId"></id>
+    <result column="password" property="password"></result>
+  </resultMap>
+  
+  <update id="updateUsers" resultMap="Pw">
+      UPDATE users
+         SET pass = #{pass}
+       WHERE userId = #{userId};
+  </update>
+
+</mapper>
+  

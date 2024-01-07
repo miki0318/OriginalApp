@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmln:th="http://www.thymeleaf.org">
+  <head>
+    <link rel="stylesheet" href="css/login.css">
+    <!--Googleフォント-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Yomogi&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <!--ajax-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>    
+  </head>
+
+  <body>
+    <header>
+      <h1 id="title">タイトル</h1>
+    </header>
+
+    <main>
+	  <div th:if="${param.error}" class="alert alert-danger">
+		メールアドレスまたはパスワードが正しくありません。
+	  </div>
+      <form method="post">
+<!--		  onSubmit="return buttonclick()" action="main.html"-->
+      <div id="mail">
+        <label for="mailadress" class="tag">ID</label>
+        <input type="email" name="e-mail" id="text" placeholder="メールアドレス" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+      </div> 
+      <div id="password">
+        <label for="password" class="tag">パスワード</label>
+        <input type="password" name="password" id="pass" pattern="^(?=.*?[a-zA-Z])(?=.*?\d)[a-zA-Z\d]+$" required>
+        <input type="checkbox" id="chk">
+        <h1 class="display">表示</h1>
+      </div>
+      <p id="validate_msg"></p>
+      <button id="btn" onclick="buttonclick()">ログイン</button>
+<!--      <input type="submit" value="ログイン" id="btn">-->
+      </form>
+      <a href="new.html" class="link">
+        <p id="new">新規登録はこちら</p>
+      </a>
+      <a href="forget.html" class="link">
+        <p id="forget">パスワードを忘れた場合</p>
+      </a>
+    </main>
+
+    <footer>
+    </footer>
+    <script src="js/login.js"></script>
+  </body>
+
+</html>
