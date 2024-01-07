@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/new.css">
+    <!--Googleフォント-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Yomogi&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+   <!--ajax-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <button id="closebtn" onclick="location.href='login.html'">
+        <img src="img/close.png" id="close">
+      </button>
+      <h1 id="title">タイトル</h1>
+    </header>
+
+    <main>
+      <form method="post" id="newform" name="myform" onSubmit="return buttonClick()" action="login.html">
+      <div id="name">
+        <label for="username" class="required">名前</label>
+        <input type="text" name="username" class="text" required>
+      </div> 
+      <div id="password">
+        <label for="password" class="required">パスワード</label>
+        <input type="password" name="password" placeholder="半角英数字8～15文字" pattern="^(?=.*?[a-zA-Z])(?=.*?\d)[a-zA-Z\d]+$" id="pass" required>
+        <input type="checkbox" id="chk">
+        <h1 class="display">表示</h1>
+      </div>
+      <p id="validate_msg"></p>
+      <div id="birth">
+        <label for="birthday" class="tag">生年月日</label>
+        <input type="date" name="birthday" class="text">
+      </div>
+      <div id="mail">
+        <label for="mailadress" class="required">ID</label>
+        <input type="email" name="e-mail" class="text" placeholder="メールアドレス" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+      </div> 
+      <input type="submit" value="新規登録" id="btn">
+      </form>
+      
+      <div id="overlay">
+        <div class="cv-spinner">
+          <span class="spinner"></span>
+        </div>
+      </div>
+
+    </main>
+    <script src="js/new.js"></script>
+  </body>
+
+</html>

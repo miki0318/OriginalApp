@@ -1,0 +1,197 @@
+body{
+  width: 1500px;
+  height: 3200px;
+}
+header{
+  display: block;
+  width: 1500px;
+  height: 15%;
+}
+#top {
+  display: flex;
+  width: 1500px;
+  height: 35%;
+}
+/*メモ名*/
+#memoname {
+  height: 20%;
+  color:black;
+  margin:4% auto 4% auto;
+  font-size: 4em;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Yomogi', cursive;
+  font-family: 'Zen Kurenaido', sans-serif;
+}
+#out {
+  display: block;
+  width:20%;
+  height: 75%;
+  margin:3% auto 3% 53%;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Yomogi', cursive;
+  font-family: 'Zen Kurenaido', sans-serif;
+  background-color: #bf6159;
+  border-color: #bf6159;
+  color:  #fff8f3;
+  font-size: 3em;
+  border-radius: 0.3em;
+}
+
+table{
+  width: 95%;
+  height: 60%;
+  margin: auto;
+  border: none;
+}
+td,tr{
+  border: none;
+}
+#right1,#right2{
+  width: 25%;
+}
+#left{
+  width: 35%;
+}
+#center{
+  width: 20%;
+}
+/*アイコン*/
+#icon{
+  display: block;
+  width: 80%;
+  margin:auto;
+}
+/*日付*/
+#date{
+  color: #bf6159;
+  margin:auto;
+  font-size: 4.5em;
+  text-align: center;
+}
+#layout{
+  display: block;
+  width: 100%;
+  margin:auto;
+}
+/*編集ボタン*/
+#edit, #save{
+  display: block;
+  width: 100%;
+  margin:auto;
+  text-align: center;
+}
+
+#save{
+  display: none;
+}
+main{
+  width: 100%;
+  height: 70%;
+}
+form{
+  width: 100%;
+  height: 100%;
+}
+
+#box2,#box3{
+  display: block;
+}
+/*入力画面の見出し*/
+.heading {
+  color:black;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Yomogi', cursive;
+  font-family: 'Zen Kurenaido', sans-serif;
+  font-size: 3em;
+  margin:0% 15%;
+  border: none;
+}
+/*入力部分3つとも*/
+textarea{
+  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Yomogi', cursive;
+  font-family: 'Zen Kurenaido', sans-serif;
+}
+/*入力部分*/
+.textbox{
+  display: block;
+  resize: none;
+  width:80%;
+  height:20%;
+  border: 5px solid #bf6159;
+  font-size: 4em;
+  line-height: 1.2;
+  margin:6% auto;
+}
+footer{
+  width: 100%;
+  height: 20%;
+}
+/*検索・各種設定・その他*/
+h2{
+  color:black;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Yomogi', cursive;
+  font-family: 'Zen Kurenaido', sans-serif;
+  font-size: 2.5em;
+  margin: auto;
+  text-align: center;
+}
+/*下のボタン*/
+#searchbtn, #setbtn, #listbtn{
+  width:65%;
+  display: block;
+  margin: auto;
+  background-color: white;
+  border: none;
+}
+/*下のボタンの画像*/
+.bottom{
+  width:100%;
+  height: 100%;
+  display: block;
+  margin: auto;
+}
+/*検索*/
+.search{
+  margin:auto;
+  width: 30%;
+}
+/*各種設定*/
+.setting{
+  margin:auto;
+  width: 30%;
+}
+/*その他*/
+.list{
+  margin:auto;
+  width: 30%;
+}
+#overlay{ 
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height:100%;
+  display: none;
+  background: rgba(0,0,0,0.6);
+}
+.cv-spinner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px #ddd solid;
+  border-top: 4px #2e93e6 solid;
+  border-radius: 50%;
+  animation: sp-anime 0.8s infinite linear;
+}
+@keyframes sp-anime {
+  100% { 
+    transform: rotate(360deg); 
+  }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/list.css">
+   <!--Googleフォント-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Yomogi&family=Zen+Kurenaido&display=swap" rel="stylesheet">  
+  </head>
+
+  <body>
+    <header>
+      <button onclick="closebtnClick()" id="closebtn">
+        <img src="img/close.png" id="close">
+      </button>
+    </header>
+    <main>
+      <table border="1">
+        <tr id="account1">
+            <td class="left">
+              <button id="ic1" onclick="button1Click()">
+              <img src="img/memo.png" class="icon" id="ac1">
+              </button>
+            </td> 
+            <td class="center">
+              <h1>メモ名</h1>
+            </td>
+            <td class="right">
+                <img id="check1" src="img/check.png" alt="button">
+              </button>
+            </td>
+        </tr> 
+  
+        <tr id="account2">
+            <td class="left">
+              <button id="ic2" onclick="button2Click()">
+              <img src="img/memo.png" class="icon" id="ac2">
+              </button>
+            </td>
+            <td class="center">
+              <h1>メモ名</h1>
+            </td>
+            <td class="right">
+                <img id="check2" src="img/check.png" alt="button">
+              </button>
+            </td>
+        </tr>
+  
+        <tr id="addition">
+            <td class="left">
+              <a href="account-add.html"><img src="img/add.png" id="add"></a>
+            </td>
+            <td class="center">
+              <h1>メモを追加</h1>
+            </td>
+            <td class="right">
+            </td>
+        </tr>
+      </table>
+  
+      <hr>
+   
+    </main>
+
+    <footer>
+
+      <h2>リクエスト</h2>
+
+      <hr>
+  
+      <table border="1">
+        <tr id="request1">
+          <td class="left">
+            <img src="img/icon.png" class="icon">
+          </td>
+          <td class="center">
+            <h1>ユーザー名</h1>
+          </td>
+          <td class="right1">
+            <button type="button" class="btn" id="admit1">承認</button>
+          </td>
+          <td class="right2">
+            <button type="button" class="btn" id="del1">削除</button>
+          </td>
+        </tr>
+    
+        <tr id="request2">
+          <td class="left">
+            <img src="img/icon.png" class="icon">
+          </td>
+          <td class="center">
+            <h1>ユーザー名</h1>
+          </td>
+          <td class="right1">
+            <button type="button" class="btn" id="admit2">承認</button>
+          </td>
+          <td class="right2">
+            <button type="button" class="btn" id="del2">削除</button>
+          </td>
+        </tr>
+      </table>
+      <hr>
+      <button type="button" class="btn2" onclick="location.href='account-copy.html'">招待</button>
+  
+    </footer>
+
+    <script src="js/list.js"></script>
+  </body>
+</html>

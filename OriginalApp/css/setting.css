@@ -1,0 +1,159 @@
+body{
+  width: 1500px;
+  height: 3200px;
+}
+header{
+  width: 100%;
+  height: 25%;
+}
+
+#picture{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+#picturebtn{
+display: flex;
+width: 100%;
+height: 100%;
+}
+
+#icon{
+  width: 50%;
+  height: 100%;
+  margin: unset;
+}
+
+#btn{
+  display: flex;
+  width: 60%;
+  height: 25%;
+  font-size: 3em;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Yomogi', cursive;
+  font-family: 'Zen Kurenaido', sans-serif;
+  margin: auto;
+  color: #fefdfb;
+  background-color: #bf6159;
+  border-color: #bf6159;
+  border-radius: 0.3em;
+  justify-content: center;
+  align-items: center;
+}
+
+#imgfile{
+  display: none;
+}
+
+main{
+  width: 100%;
+  height: 60%;
+}
+
+.profile{
+  display: flex; 
+  width: 100%;
+  height:24%;
+
+}
+#username{
+  color: black;
+  font-size: 4em;
+  width: 40%;
+  height: 40%;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Yomogi', cursive;
+  font-family: 'Zen Kurenaido', sans-serif;
+  border: 5px solid;
+  border-color: #70706a;
+  margin: auto;
+}  
+
+#a,#b,#c,#d{
+  color: black;
+  font-size: 4em;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Yomogi', cursive;
+  font-family: 'Zen Kurenaido', sans-serif;
+  margin: auto;
+  width: 30%;
+}
+
+/*.title{
+  color: black;
+  font-size: 4em;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Yomogi', cursive;
+  font-family: 'Zen Kurenaido', sans-serif;
+  margin: auto;
+  width: 30%;
+}*/
+
+button{
+  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Yomogi', cursive;
+  font-family: 'Zen Kurenaido', sans-serif;
+  font-size: 2em;
+}
+
+.select{
+  border: 5px solid;
+  border-color: #7b7972;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Yomogi', cursive;
+  font-family: 'Zen Kurenaido', sans-serif;
+  font-size: 4em;
+  margin: auto;
+  width: 40%;
+  height: 40%;
+}
+
+option{
+  font-size: 0.3em;
+}
+
+footer{
+  width: 100%;
+  height: 15%;
+  display: flex;
+}
+
+#switchbtn{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+#cancel{
+  color: #fff8f3;
+  background-color: #f1be8e;
+  border-color:  #f1be8e;
+  border-radius:0.3em;
+  font-size: 3em;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Yomogi', cursive;
+  font-family: 'Zen Kurenaido', sans-serif;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 5%;
+  width: 30%;
+  height: 35%;
+}
+#change{
+  color: #fff8f3;
+  background-color: #f1be8e;
+  border-color:  #f1be8e;
+  border-radius:0.3em;
+  font-size: 3em;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Yomogi', cursive;
+  font-family: 'Zen Kurenaido', sans-serif;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 5%;
+  width: 30%;
+  height: 35%;
+}
